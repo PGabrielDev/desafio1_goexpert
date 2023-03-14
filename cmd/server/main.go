@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/PGabrielDev/desafio1_goexpert/infra/database"
 	"github.com/PGabrielDev/desafio1_goexpert/infra/talkers"
-	"github.com/PGabrielDev/desafio1_goexpert/internal/use_cases"
+	"github.com/PGabrielDev/desafio1_goexpert/internal/server/use_cases"
 	"net/http"
 )
 
@@ -18,7 +18,7 @@ func main() {
 	}
 	usecase := usecases.NewGetValueDolarUseCase(talker, repository)
 
-	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
+	http.HandleFunc("/cotacao", func(writer http.ResponseWriter, request *http.Request) {
 		us, err := usecase.Execute()
 		if err != nil {
 			writer.WriteHeader(http.StatusInternalServerError)
@@ -32,6 +32,6 @@ func main() {
 			return
 		}
 	})
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":8080", nil)
 
 }

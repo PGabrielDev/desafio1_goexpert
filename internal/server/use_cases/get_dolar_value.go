@@ -1,8 +1,8 @@
 package usecases
 
 import (
-	"github.com/PGabrielDev/desafio1_goexpert/internal/entity"
-	"github.com/PGabrielDev/desafio1_goexpert/internal/ports"
+	"github.com/PGabrielDev/desafio1_goexpert/internal/server/entity"
+	"github.com/PGabrielDev/desafio1_goexpert/internal/server/ports"
 )
 
 type GetValueDolarUseCase struct {

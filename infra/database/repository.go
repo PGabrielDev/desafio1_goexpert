@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/PGabrielDev/desafio1_goexpert/internal/entity"
+	"github.com/PGabrielDev/desafio1_goexpert/internal/server/entity"
 	_ "modernc.org/sqlite"
 )
 

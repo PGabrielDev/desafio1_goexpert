@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/PGabrielDev/desafio1_goexpert/internal/entity"
+	"github.com/PGabrielDev/desafio1_goexpert/internal/server/entity"
 )
 
 type TalkerGetDolar struct {
